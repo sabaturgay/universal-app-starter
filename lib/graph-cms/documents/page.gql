@@ -1,0 +1,14 @@
+query GetPage($id: ID) {
+  page(where: { id:$id }){
+    id
+    createdAt
+    updatedAt
+    title
+    slug
+    subtitle
+    content{
+      text
+    }
+  }
+}
+

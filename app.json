@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "universal-app-starter",
+    "slug": "universal-app-starter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/path/to/myNotificationIcon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./local/path/to/mySound.wav",
+            "./local/path/to/myOtherSound.wav"
+          ],
+          "mode": "production"
+        }
+      ],
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "colay-x",
+            "project": "demo-app"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+import './polyfills'
+import 'setimmediate'
+import 'react-native-get-random-values'
+import 'react-native-gesture-handler'
+// import './sentry'
+import './cloud'

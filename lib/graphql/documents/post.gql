@@ -1,0 +1,15 @@
+query FindManyPost($skip:Int, $take:Int) {
+  findManyPost(skip:$skip, take:$take) {
+    id
+    title
+  }
+}
+
+mutation CreateOnePost($data: PostCreateInput!){
+  createOnePost(data:$data) {
+    id
+    slug
+    title
+    body
+  }
+}

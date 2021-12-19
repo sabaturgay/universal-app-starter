@@ -1,0 +1,23 @@
+generates:
+  ./lib/graphql/index.ts:
+    schema: ./lib/graphql/schema.gql
+    documents: "./lib/graphql/**/*.gql"
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+    config:
+      exposeQueryKeys: true
+      fetcher:
+        func: './fetcher#fetcher'
+  ./lib/graph-cms/index.ts:
+    schema: https://api-eu-central-1.graphcms.com/v2/*******/master
+    documents: "./lib/graph-cms/**/*.gql"
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+    config:
+      exposeQueryKeys: true
+      fetcher:
+        func: './fetcher#fetcher'
